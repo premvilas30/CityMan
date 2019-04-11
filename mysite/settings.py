@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'myapp',
 ]
 
@@ -79,10 +80,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	'NAME': 'bikes',
+	    'NAME': 'bikes',
         'USER': 'postgres',
         'PASSWORD': 'citymangroup6',
-        'HOST': '35.246.245.135',
+        'HOST': 'localhost',
         'PORT': '5432',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }

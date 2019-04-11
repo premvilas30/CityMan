@@ -17,7 +17,7 @@ function reload() {
     var x = document.getElementById("input_cal").value;
         console.log(x+":00")
         var t = new Date(x).getTime()
-    src = 'http://35.246.59.184/map/'+t
+    src = 'http://127.0.0.1:8000/map/'+t
     document.getElementById('mapsframe').src = src;
 } btn.onclick = reload;
 </script>
@@ -28,7 +28,7 @@ function reload() {
     <iframe
       id = "mapsframe"
       name ="maps"
-      src="http://35.246.59.184/map/{{ timeIn }}"
+      src="http://127.0.0.1:8000/map/{{ timeIn }}"
       frameborder="0" allowfullscreen scrolling="auto" class="maps"
    ></iframe></div>
 <style>
