@@ -5,8 +5,8 @@ import luas.api
 import psycopg2
 
 try:
-    engine_luas = create_engine('postgresql://postgres:citymangroup6@35.246.245.135:5432/bikes')
-    connection = psycopg2.connect(user="postgres", password="citymangroup6", host="35.246.245.135", port="5432", database="bikes")
+    engine_luas = create_engine('postgresql://postgres:citymangroup6@localhost:5432/bikes')
+    connection = psycopg2.connect(user="postgres", password="citymangroup6", host="localhost", port="5432", database="bikes")
     cursor = connection.cursor()
     cursor.execute("SELECT abbr FROM luastations")
     stop_abbr = cursor.fetchall()

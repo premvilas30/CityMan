@@ -4,11 +4,11 @@ from sqlalchemy import create_engine
 import time,logging, traceback
 
 try:
-       engine_bike = create_engine('postgresql://postgres:citymangroup6@35.246.245.135:5432/bikes')
+       engine_bike = create_engine('postgresql://postgres:citymangroup6@localhost:5432/bikes')
        response_bikedata = requests.get(
            'https://api.jcdecaux.com/vls/v1/stations/?contract=Dublin&apiKey=44dc31cd0a59d9c65406e966bc6e36f4d1efe7d4')
 
-       engine_weather = create_engine('postgresql://postgres:citymangroup6@35.246.245.135:5432/bikes')
+       engine_weather = create_engine('postgresql://postgres:citymangroup6@localhost:5432/bikes')
        response_weatherdata = requests.get(
            'https://api.openweathermap.org/data/2.5/weather?q=Dublin&appid=7610d9495d81e40df6a3c641f4425fde')
 
